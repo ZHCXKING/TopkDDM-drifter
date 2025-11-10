@@ -1,4 +1,4 @@
-# Top-k DDM: A Rank-Sensitive Concept Drift Detection Framework for Recommendation Systems
+# Top-$k$ DDM: A novel two-stage concept drift detection framework for recommendation systems
 
 This framework is specifically designed to address the concept drift problem in recommender systems, particularly the challenge posed by the dynamic changes in user preferences over time, aiming to improve the long-term performance of recommender systems. Traditional drift detection methods (such as DDM) rely on the error rate of classification tasks and cannot effectively capture the decline in Top-k ranking quality in recommender systems. Top-k DDM solves this problem through an innovative two-stage mechanism, making it more sensitive and robust to recommender tasks.
 
@@ -42,13 +42,15 @@ Top-k DDM is our core method, which overcomes the limitation of traditional meth
 ## Install dependencies
 
 The project's main dependencies include:
-- Python 3.7+
-- numpy
-- pandas
-- scikit-learn
-- lightgbm
-- cornac
-- river
+- Python==3.12.9
+- numpy==2.3.4
+- pandas==2.3.3
+- scikit-learn==1.7.2
+- lightgbm==4.6.0
+- cornac==2.3.5
+- river==0.22.0
+- matplotlib==3.10.7
+- torch==2.9.0+cu126
 
 ## Running Example
 

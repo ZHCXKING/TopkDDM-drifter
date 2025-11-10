@@ -2,7 +2,7 @@ from utils.framework import Framework
 import numpy as np
 import warnings
 
-#%% Configuration parameters
+# %% Configuration parameters
 control = {
     'path': 'RBF',  # Select dataset type
     'synth_control': None,  # Parameters for controlling the RBF
@@ -24,13 +24,14 @@ control['RecData_control'] = {
     'n_features': 5}  # Latent factor dimension
 warnings.filterwarnings("ignore")
 
-#%% Running RBF experiments
+# %% Running RBF experiments
 control['path'] = 'RBF'
+control['model'] = 'MLP'
 framework = Framework(**control)
 detections = framework.start_synth()
 print(detections)  # Location where the output drift detector issues an alarm
 
-#%% Running RecData experiments
+# %% Running RecData experiments
 control['path'] = 'RecData'
 framework = Framework(**control)
 model = 'BPR'  # Recommendation Model

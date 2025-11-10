@@ -5,8 +5,9 @@
       <excludeFolder url="file://$MODULE_DIR$/dataset/Dataset" />
       <excludeFolder url="file://$MODULE_DIR$/dataset/Original Dataset" />
       <excludeFolder url="file://$MODULE_DIR$/.spyproject" />
+      <excludeFolder url="file://$MODULE_DIR$/.idea" />
     </content>
-    <orderEntry type="jdk" jdkName="drift" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="TopkDDM-drifter" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="PyDocumentationSettings">

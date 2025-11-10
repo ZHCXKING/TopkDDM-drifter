@@ -97,6 +97,4 @@ if __name__ == '__main__':
     # BPR: 6, 14, 26, 38
     # BiVAECF: 6, 38, 88, 159
     # HPF: 32, 42, 94, 96
-    for i in [6, 14, 26, 38]:
-        control['seed'] = i
-        draw(drifters, control, start_point, model)
+    draw(drifters, control, start_point, model)
