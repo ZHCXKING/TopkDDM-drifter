@@ -42,13 +42,15 @@ Top-k DDM is our core method, which overcomes the limitation of traditional meth
 ## Install dependencies
 
 The project's main dependencies include:
-- Python 3.7+
-- numpy
-- pandas
-- scikit-learn
-- lightgbm
-- cornac
-- river
+- Python==3.12.9
+- numpy==2.3.4
+- pandas==2.3.3
+- scikit-learn==1.7.2
+- lightgbm==4.6.0
+- cornac==2.3.5
+- river==0.22.0
+- matplotlib==3.10.7
+- torch==2.9.0+cu126
 
 ## Running Example
 

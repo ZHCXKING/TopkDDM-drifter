@@ -53,7 +53,7 @@ def draw_hr_ndcg(results, metrice, k, start_point, model):
     ax.tick_params(direction='in', top=True, right=True)
     # 自动调整布局，防止标签重叠
     plt.tight_layout()
-    # # 保存为pdf, bbox_inches='tight' 可以裁剪掉多余的白边
+    # 保存为pdf, bbox_inches='tight' 可以裁剪掉多余的白边
     # plt.savefig(path, bbox_inches='tight')
     # 显示图形 (在脚本最后调用)
     plt.show()
@@ -98,9 +98,7 @@ if __name__ == '__main__':
         'train_size': 500,
         'vaild_size': 0,
         'test_size': 20000,
-        'seed': 42,
+        'seed': 30,
         'model': 'MLP',
         'drifter': 'Topk-DDM'}
-    for i in range(200):  # 2, 10, 26, 30, 45, 54, 55, 57
-        control['seed'] = i
-        df = draw(drifters, control, start_point, model, refit_times)
+df = draw(drifters, control, start_point, model, refit_times)

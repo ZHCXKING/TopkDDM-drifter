@@ -1,5 +1,4 @@
 # %%
-import pandas as pd
 import numpy as np
 import time
 from utils.synth_data import LED, RBF, RecData
@@ -8,14 +7,13 @@ from river.drift import ADWIN, NoDrift
 from river.drift.binary import DDM, EDDM, HDDM_A, HDDM_W
 from utils.other_drifter import BDDM, MWDDM, VFDDM
 from lightgbm import LGBMClassifier
-from catboost import CatBoostClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.naive_bayes import GaussianNB
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.neural_network import MLPClassifier
 from utils.evaluate_metrics import hit, compute_hit_rate, compute_ndcg
 from cornac.data import Dataset
-from cornac.models import BPR, BiVAECF, IBPR, HPF, MF, SVD
+from cornac.models import BPR, BiVAECF, HPF, MF, SVD
 # %%
 
 
@@ -74,9 +72,7 @@ class Framework:
         return x_train, x_vaild, x_test, y_train, y_vaild, y_test
 
     def model_fit(self, model):
-        if model == 'CAT':
-            self.model = CatBoostClassifier(random_state=self.seed, logging_level='Silent', allow_writing_files=False)
-        elif model == 'LGBM': 
+        if model == 'LGBM':
             self.model = LGBMClassifier(random_state=self.seed, verbosity=-1)
         elif model == 'RF': 
             self.model = RandomForestClassifier(random_state=self.seed)
@@ -87,7 +83,7 @@ class Framework:
         elif model == 'MLP': 
             self.model = MLPClassifier(random_state=self.seed)
         else: 
-            raise ValueError("Supported models are: CAT, LGBM, RF, NB, KNN, MLP.")
+            raise ValueError("Supported models are: LGBM, RF, NB, KNN, MLP.")
 
     def drifter_fit(self, drifter):
         self.renew = False
@@ -129,9 +125,6 @@ class Framework:
             del_offset = True
         elif model == 'BiVAECF': 
             self.model = BiVAECF(k=50, likelihood='bern', n_epochs=500, seed=self.seed)
-            del_offset = False
-        elif model == 'IBPR': 
-            self.model = IBPR(k=50, max_iter=500, init_params=init_params)
             del_offset = False
         elif model == 'HPF': 
             self.model = HPF(k=50, max_iter=500, seed=self.seed, init_params=init_params)
