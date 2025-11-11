@@ -2,7 +2,7 @@
 import numpy as np
 import time
 from utils.synth_data import LED, RBF, RecData
-from utils.util import Topk_DDM
+from utils.Topk_DDM import Topk_DDM
 from river.drift import ADWIN, NoDrift
 from river.drift.binary import DDM, EDDM, HDDM_A, HDDM_W
 from utils.other_drifter import BDDM, MWDDM, VFDDM

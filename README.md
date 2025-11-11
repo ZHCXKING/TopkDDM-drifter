@@ -23,7 +23,7 @@ Master/
 │   ├── evaluate_metrics.py # Evaluation indicators
 │   ├── other_drifter.py    # Other drift detection algorithms
 │   ├── synth_data.py       # Synthetic data generation
-│   └── util.py             # Top-k DDM implementation
+│   └── Topk_DDM.py             # Top-k DDM implementation
 ├── result/            # Experimental Results and Visualization
 │   ├── figure/        # Experimental results figure
 │   ├── table/         # Experimental Results Table
