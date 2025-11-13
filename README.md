@@ -14,22 +14,22 @@ This framework is specifically designed to address the concept drift problem in 
 
 ```
 Master/
-├── dataset/           # Dataset processing related code
-│   ├── Dataset/       # Processed dataset storage directory
+├── dataset/              # Dataset processing related code
+│   ├── Dataset/          # Processed dataset storage directory
 │   ├── Original Dataset/ # Original dataset storage directory
-│   └── data_process.py  # Data processing script
-├── utils/             # Core functional modules
-│   ├── framework.py   # Experimental framework
+│   └── data_process.py   # Data processing script
+├── utils/                  # Core functional modules
+│   ├── framework.py        # Experimental framework
 │   ├── evaluate_metrics.py # Evaluation indicators
 │   ├── other_drifter.py    # Other drift detection algorithms
 │   ├── synth_data.py       # Synthetic data generation
-│   └── Topk_DDM.py             # Top-k DDM implementation
+│   └── Topk_DDM.py         # Top-k DDM implementation
 ├── result/            # Experimental Results and Visualization
 │   ├── figure/        # Experimental results figure
 │   ├── table/         # Experimental Results Table
 │   └── get_*.py       # Experimental script
-├── main.py            # test file
-└── README.md          # Project Description Document
+├── main.py        # test file
+└── README.md      # Project Description Document
 ```
 
 ## Core Component Description
