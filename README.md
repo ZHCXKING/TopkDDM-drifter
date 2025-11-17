@@ -54,4 +54,4 @@ The project's main dependencies include:
 
 ## Running Example
 
-You can modify `main.py` as a test file to test the effectiveness of different drift detection methods. This file uses two synthetic datasets:
+You can modify `main.py` as a test file to evaluate the effectiveness of different drift detection methods on both synthetic and recommendation datasets.
