@@ -26,7 +26,7 @@ warnings.filterwarnings("ignore")
 
 # %% Running RBF experiments
 control['path'] = 'RBF'
-control['model'] = 'MLP'
+control['model'] = 'MLP'  # Recommendation Model
 framework = Framework(**control)
 detections = framework.start_synth()
 print(detections)  # Location where the output drift detector issues an alarm

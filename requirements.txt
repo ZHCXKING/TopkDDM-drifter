@@ -1,0 +1,9 @@
+pandas~=2.3.3
+numpy~=2.3.4
+torch~=2.9.0+cu126
+lightgbm~=4.6.0
+scikit-learn~=1.7.2
+scipy~=1.16.3
+river~=0.22.0
+cornac~=2.3.5
+tqdm~=4.67.1

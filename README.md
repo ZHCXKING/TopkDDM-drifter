@@ -29,7 +29,7 @@ Master/
 │   ├── table/         # Experimental Results Table
 │   └── get_*.py       # Experimental script
 ├── main.py        # test file
-└── README.md      # Project Description Document
+└── README.md      # Project Description Document 
 ```
 
 ## Core Component Description
@@ -42,16 +42,20 @@ Top-k DDM is our core method, which overcomes the limitation of traditional meth
 ## Install dependencies
 
 The project's main dependencies include:
-- Python==3.12.9
-- numpy==2.3.4
-- pandas==2.3.3
-- scikit-learn==1.7.2
-- lightgbm==4.6.0
-- cornac==2.3.5
-- river==0.22.0
-- matplotlib==3.10.7
-- torch==2.9.0+cu126
+- python == 3.12.9
+- numpy == 2.3.4
+- pandas == 2.3.3
+- scikit-learn == 1.7.2
+- lightgbm == 4.6.0
+- cornac == 2.3.5
+- river == 0.22.0
+- matplotlib == 3.10.7
+- torch == 2.9.0+cu126
 
 ## Running Example
 
 You can modify `main.py` as a test file to evaluate the effectiveness of different drift detection methods on both synthetic and recommendation datasets.
+
+```
+python main.py
+```
